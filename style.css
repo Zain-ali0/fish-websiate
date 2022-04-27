@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,500;1,600;1,700&display=swap');
+
+*
+{
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: all .3s cubic-bezier(.38,1.15,.7,1.12);
+}
+
+html
+{
+    font-size: 80.6%;
+}
+
+section
+{
+    margin-top: 10rem;
+}
+
+.title h1
+{
+    padding-top: 2rem;
+    text-align: center;
+    border-bottom: .2rem solid var(--green-color);
+    width: 10rem;
+}
+
+.title  p 
+{
+    padding-top: 1rem;
+    font-weight: 600;
+}
+
+:root
+{
+    --white-color:#fff;
+    --block-color:#333;
+    --green-color:#4fcf70;
+    --yellow-color:#fad648 ;
+    --brown-color: #a767e5;
+    --water-color: #12bcfe;
+    --green2-color:#44ce7b;    
+    --box-shadow:  rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+header 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    transition: .3s ease-in-out;
+}
+
+
+
+header.active 
+{
+    background:var(--water-color);
+    color: linear-gradient();
+}
+
+header .logo
+{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--white-color);
+}
+
+header .menuToggle
+{
+    width: 30px;
+    height: 30px;
+    background-size: 45px;
+    background-image: url(/img/menu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+
+header nav a
+{
+    margin: 1rem;
+    color: var(--white-color);
+    transition: all .3s ease-in-out;
+    font-size: 1.6rem;
+}
+
+header nav a:hover 
+{
+    border-bottom:  .1rem solid var(--green-color);
+}
+
+.slider 
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slider .slide
+{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+}
+
+.slider .slide img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: zoom 3s linear infinite;
+}
+
+
+.slider .slide .info 
+{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color:var(--white-color);
+    bottom: 1rem;
+    left: 1rem;
+    width: 30rem;
+    background: #333;
+    opacity: .7;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+
+.slider .slide .info h3 
+{
+    font-size: 1.8rem;
+}
+
+.slider .slide .info .social i
+{
+    margin: .8rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.slider .slide .info .social i:hover 
+{
+    color: var(--green-color);
+}
+
+.ourfish
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+
+.ourfish .Box
+{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2rem;
+    padding: 2rem;
+}
+
+
+.ourfish .Box .line 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+}
+
+.ourfish .Box .line .fish 
+{
+
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ourfish .Box .line .fish img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    float: right;
+}
+
+.ourfish .Box .line .fish p 
+{
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+}
+
+
+.link
+{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.link a 
+{
+    padding: 1rem;
+    background: var(--water-color);
+    color: var(--white-color);
+    border-radius: 1rem;
+    transition: .2s;
+}
+
+.link a:hover 
+{
+    background: var(--green-color);
+}
+
+
+.ourhunters
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.ourhunters .box 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.ourhunters .box .images 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.ourhunters .box .images img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ourhunters .box p 
+{
+    margin-top: 1rem;
+    color: var(--block-color);
+
+}
+
+footer
+{
+    background: var(--water-color);
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+footer .container 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+footer .container .box 
+{
+    padding: 2rem;
+}
+
+footer .container .box h3 
+{
+    font-size: 2rem;
+}
+
+footer .container .box i,
+footer .container .box a
+{
+    display: flex;
+    padding: 1rem;
+    font-size: 1.3rem;
+    color:var(--block-color) ;
+    cursor: pointer;
+}
+
+footer h1 
+{
+    text-align: center;
+}
+
+
+footer h1 a 
+{
+    cursor: pointer;
+    color: var(--white-color);
+}
+
+@keyframes zoom {
+    0%
+    {
+        transform: scale(1.3);
+    }
+    15%
+    {
+        transform: scale(1);
+    }
+    85%
+    {
+        transform: scale(1);
+    }
+    100%
+    {
+        transform: scale(1.3);
+    }
+}
+
+@media (max-width:768px) {
+
+    header nav 
+    {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 100%;
+        left: 0;
+        background: var(--green-color);
+        width: 100%;
+        transform: scaleX(0);
+        opacity: 0;
+    }
+    header nav.active
+    {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+    header nav a 
+    {
+        width: 3rem;
+        transition: .3s ease-in-out;
+    }
+    header .menuToggle 
+    {
+        display: block;
+    }
+    header .menuToggle.active
+    {
+        background-image: url(/img/close.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
